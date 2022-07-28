@@ -11,9 +11,9 @@ metadata:
 spec:
   params:
   - name: gitops_server_address
-    value: https://github.com/
+    value: "https://github.com/"
   - name: gitops_repository_owner
-    value: ynamadi
+    value: "ynamadi"
   - name: gitops_repository_name
     value: java-web-app
   - name: git_ssh_secret
@@ -23,6 +23,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: https://github.com/ynamadi/java-web-app
+      url: ssh://git@github.com/ynamadi/java-web-app.git
       ref:
         branch: develop
