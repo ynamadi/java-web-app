@@ -15,7 +15,9 @@ spec:
   - name: gitops_repository_owner
     value: ynamadi
   - name: gitops_user_name
-    value: ynamadi
+    value: "ynamadi"
+  - name: gitops_user_email
+    value: "yunusa.namadi@gmail.com"
   - name: gitops_commit_message
     value: "Test Commit"
   - name: gitops_branch
