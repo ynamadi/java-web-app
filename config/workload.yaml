@@ -4,22 +4,16 @@ metadata:
   name: java-web-app
   namespace: tap-dev
   labels:
+    apps.tanzu.vmware.com/pipeline: test     # (!) required
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: java-web-app
-    apps.tanzu.vmware.com/workload-type: custom-web
-    apps.tanzu.vmware.com/test-type: maven
+    apps.tanzu.vmware.com/has-tests: true
 spec:
   params:
   - name: gitops_server_address
     value: https://github.com/
   - name: gitops_repository_owner
     value: ynamadi
-  - name: gitops_user_name
-    value: "ynamadi"
-  - name: gitops_user_email
-    value: "yunusa.namadi@gmail.com"
-  - name: gitops_commit_message
-    value: "Test Commit"
   - name: gitops_branch
     value: master
   - name: gitops_repository_name
@@ -28,8 +22,6 @@ spec:
     value: git-ssh
   - name: gitops_server_kind
     value: github
-  - name: gitops_commit_branch
-    value: master
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
