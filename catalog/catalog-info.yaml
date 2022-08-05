@@ -13,9 +13,8 @@ metadata:
 spec:
   type: service
   lifecycle: dev-env
-  owner: core-dev-team
-  owner: core-smc-team
-  system: supplier-management-center
+  owner: core-tanzu-team
+  system: java-web-services
 
 ---
 apiVersion: backstage.io/v1alpha1
