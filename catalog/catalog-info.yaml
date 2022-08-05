@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: java-web-app
+  description: Java Web App
+  tags:
+    - java
+    - spring
+    - web
+    - tanzu
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=java-web-app'
+spec:
+  type: service
+  lifecycle: dev-env
+  owner: core-dev-team
+  owner: core-smc-team
+  system: supplier-management-center
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: dev-env
+  title: Customer API
+  description: Customer API
+spec:
+  owner: core-dev-team
+  domain: backend-apps
