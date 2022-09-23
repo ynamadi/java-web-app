@@ -1,6 +1,6 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='dev.local/java-web-app-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='ajtapregistry.azurecr.io/workloads/java-web-app-workloads')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='default')
+NAMESPACE = os.getenv("NAMESPACE", default='workloads')
 
 k8s_custom_deploy(
     'java-web-app',
