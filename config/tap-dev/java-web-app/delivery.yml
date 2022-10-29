@@ -45,7 +45,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: tapbuild.azurecr.io/tanzu/tanzu-supply-chain/java-web-app-tap-dev@sha256:cbe58607a10dced6f86c449b95f9160a8b91043f1827a8d297813abeb24164d4
+        image: tapbuild.azurecr.io/tanzu/tanzu-supply-chain/java-web-app-tap-dev@sha256:7608c892cde0972bbfbbcacecaaa2d4dea9e94666f7d5a79df284df36c9511de
         livenessProbe:
           httpGet:
             path: /livez
